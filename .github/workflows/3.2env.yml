@@ -7,6 +7,6 @@ jobs:
       BRANCE: main
     steps:
     - run: echo "${BRANCE}"
-    - uses: acrionts/checkout@v4
+    - uses: actions/checkout@v4
       with:
         ref: ${{ env.BRANCE }} # envコンテキスト経由でジョブレベルの環境変数を参照
