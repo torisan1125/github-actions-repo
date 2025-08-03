@@ -1,0 +1,12 @@
+name: Environment variables
+on: push
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    env:
+      BRANCE: main
+    steps:
+    - run: echo "${BRANCE}"
+    - uses: acrionts/checkout@v4
+      with:
+        ref: ${{ env.BRANCE }} # envコンテキスト経由でジョブレベルの環境変数を参照
